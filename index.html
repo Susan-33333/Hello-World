@@ -65,7 +65,7 @@
         //2位數
         hours = String(hours).padStart(2, '0');
         minutes = String(minutes).padStart(2, '0');
-        seconds = String(minutes).padStart(2, '0');//turn 3 sec. to 03 sec.
+        seconds = String(seconds).padStart(2, '0');//turn 3 sec. to 03 sec.
         //update time
         countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
 
