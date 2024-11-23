@@ -29,7 +29,7 @@
   </head>
   <body>
     <c>
-      you have seen this website for :
+      You have seen this website for :
     </c>
     <div class="time-box" id="js-time-box">
          <span class="time-countdown" id="js-count-down">00:00:00</span>
@@ -65,7 +65,7 @@
         //2位數
         hours = String(hours).padStart(2, '0');
         minutes = String(minutes).padStart(2, '0');
-
+        seconds = String(minutes).padStart(2, '0');//turn 3 sec. to 03 sec.
         //update time
         countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
 
