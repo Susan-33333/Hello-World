@@ -48,5 +48,31 @@
       Version:1<br>
       The development log can be found <a href="hello.world開發紀錄_v20190915a.pdf">here</a><br>
     </p>
+    <script>
+      //set up initial time
+      let timeElapsed = 0; //sec.
+      //set up timers
+      const countdownEleement = document.getElementById('js-count-down');
+      const hideButton = document.getElementById('js-hide-time');
+      //the fc. to update time
+      function updateTimer(){
+        let hours = Math.floor(timeELapsed / 3600);
+        let minutes = Math.floor((timeElapsed % 3600)/60);
+        let seconds = timeElapsed % 60;
+        //2位數
+        hours = String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
+
+        //update time
+        countdownElement.textContent = ${hours}:${minutes}:${seconds};
+
+        timeElapsed++;
+      }
+      const timer = setInterval(updateTimer, 1000);
+      hideButton.addEventListener('click',function(){
+        const timeBox = document.getElementById('js-time-box');
+        timeBox.style.display = timeBox.style.display === 'none' ? 'block' : 'none';});
+      
+    </script>
   </body>
 </html>
