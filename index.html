@@ -16,13 +16,25 @@
         color: #007acc;/*超連結為藍色*/
         text-decoration: none; /*移除底線*/
       }
-      a:hover{
-        color:#ff6600;/*滑鼠移過變橘色*/}
+      button-container {text-align: center; /*中心對齊button-container的內容*/}
+      button-container s{
+        display:inline-block;/*horizontal array*/
+        margin: 0 15px;/*每個按鈕左右間距*/
+        padding:10px 20px;
+        background-color:#F9F900;/*按鈕背景顏色*/
+        color:white;/*按鈕文字顏色*/
+        /*text-decoration:none/*移除底線*/
+        border-radius:10px;/*圓角按鈕*/ 
+      }
     </style>
   </head>
   <body>
+    <div class="button-ccontainer">
     <button onclick="alert('Hello! Nice to meet you!')">Hi</button>
     <button onclick="alert('I am Susan.')">Click me</button>
+</div>
+
+   
     <p>Hello World!</p> <!-- 段落區塊paragraph -->
     <p>
       --<br><!--<br>表換行,--為文字-->
