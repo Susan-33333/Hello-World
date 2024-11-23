@@ -28,9 +28,12 @@
     </style>
   </head>
   <body>
+    <c>
+      you have seen this website for :
+    </c>
     <div class="time-box" id="js-time-box">
-                <span class="time-countdown" id="js-count-down">00:00:00</span>
-                <div class="time-ctrl mocks-icons" id="js-hide-time"></div>
+         <span class="time-countdown" id="js-count-down">00:00:00</span>
+         <div class="time-ctrl mocks-icons" id="js-hide-time"></div>
     </div>
     <div class="button-ccontainer">
     <button onclick="alert('Hello! Nice to meet you!')">Hi</button>
@@ -52,11 +55,11 @@
       //set up initial time
       let timeElapsed = 0; //sec.
       //set up timers
-      const countdownEleement = document.getElementById('js-count-down');
+      const countdownElement = document.getElementById('js-count-down');
       const hideButton = document.getElementById('js-hide-time');
       //the fc. to update time
       function updateTimer(){
-        let hours = Math.floor(timeELapsed / 3600);
+        let hours = Math.floor(timeElapsed / 3600);
         let minutes = Math.floor((timeElapsed % 3600)/60);
         let seconds = timeElapsed % 60;
         //2位數
@@ -64,7 +67,7 @@
         minutes = String(minutes).padStart(2, '0');
 
         //update time
-        countdownElement.textContent = ${hours}:${minutes}:${seconds};
+        countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
 
         timeElapsed++;
       }
